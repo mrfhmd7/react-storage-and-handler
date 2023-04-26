@@ -2,6 +2,7 @@
 // import { add } from '../../utilities/calculate';
 // // import add from '../../utilities/calculate';
 
+import { useEffect, useState } from "react";
 import Cosmetic from "../Cosmetic/Cosmetic";
 
 const Cosmetics = () => {
@@ -9,13 +10,12 @@ const Cosmetics = () => {
      // const second = 66;
      // const total = add(first, second)
 
-     const cosmetics = [
-          {id:1, name:'Alta', price:100},
-          {id:2, name:'Malta', price:200},
-          {id:3, name:'Palta', price:300},
-          {id:4, name:'Galta', price:400},
-          {id:5, name:'Falta', price:500},
-     ];
+     const [cosmetics, setCosmetic] = useState([]);
+     useEffect(() => {
+          fetch('data.json')
+               .then(res => res.json())
+               .then(data => setCosmetic(data));
+     }, []);
      return (
           <div>
                <h1>Welcome to my Cosmetics Shop</h1>
