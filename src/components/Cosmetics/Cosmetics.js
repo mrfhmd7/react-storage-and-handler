@@ -2,6 +2,8 @@
 // import { add } from '../../utilities/calculate';
 // // import add from '../../utilities/calculate';
 
+import Cosmetic from "../Cosmetic/Cosmetic";
+
 const Cosmetics = () => {
      // const first = 55;
      // const second = 66;
@@ -19,7 +21,10 @@ const Cosmetics = () => {
                <h1>Welcome to my Cosmetics Shop</h1>
                {/* <p>Total= {total}</p> */}
                {
-                    cosmetics.map(cosmetic => console.log(cosmetic))
+                    cosmetics.map(cosmetic => <Cosmetic
+                         key={cosmetic.id}
+                         cosmetic={cosmetic}
+                    ></Cosmetic>)
                }
           </div>
      );
