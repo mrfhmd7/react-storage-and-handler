@@ -1,0 +1,20 @@
+.product{
+     border: 3px solid tomato;
+     border-radius: 10px;
+     margin: 15px;
+     padding: 10px;
+     background-color: lightcyan;
+}
+
+.btn{
+     height: 40px;
+     width: 90px;
+     background-color:lightseagreen;
+     border-radius: 3px;
+}
+
+.btn:hover{
+     background-color: rgb(80, 80, 225);
+     color: white;
+     font-weight: 700;
+}
